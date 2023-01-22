@@ -1,17 +1,19 @@
 /* css reset */
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    width: 1000px;
     margin: 0 auto;
     position: relative;
+    width: 1000px;
 }
 
 
@@ -19,16 +21,16 @@ body {
 /* fixes the header to always top */
 header {
     background-color: #0081C9;
-    width: 1000px;
-    position: fixed;
     margin: 0 auto;
+    position: fixed;
+    width: 1000px;
     z-index: 1;
 }
 
 
 a {
-    text-decoration: none;
     color: #FAF7F0;
+    text-decoration: none;
 }
 
 a:visited {
@@ -66,23 +68,22 @@ ul {
 
 
 #welcome-section {
+    background-color: rgba(250, 247, 240, 0.8);
     height: 100vh;
     margin: 0 auto;
+    /* flex properties */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(250, 247, 240, 0.8);
+    
 }
 
 #welcome-section img {
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
     border-radius: 50%;
     border: 5px solid #FFC93C;
-    z-index: 2;
-    opacity: 100%;
-    
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
 }
 
 #welcome-section div {
@@ -91,41 +92,46 @@ ul {
 
 #welcome-section h1 {
     font-size: 4.5rem;
-    margin: 10px;
     flex: 2;
+    margin: 10px;
+    
 }
 
 #welcome-section p {
+    color: #0081C9;
     font-size: 2rem;
     margin: 10px;
-    color: #0081C9;
+    
 }
 
 /* welcome layout end */
 
 /* projects layout start */
 #projects {
-    text-align: center;
-    padding: 50px 0;
     background-color: #144272;
+    padding: 50px 0;
+    text-align: center;
     
 }
 
 #projects h2 {
+    color: #FAF7F0;
     font-size: 2rem;
     margin: 20px auto 5px;
-    color: #FAF7F0;
+    
 }
 
 #projects hr {
-    width: 50%;
-    min-width: 20rem;
-    margin: 0 auto 50px;
     border: 2px solid #FAF7F0;
+    margin: 0 auto 50px;
+    min-width: 20rem;
+    width: 50%;
+    
 }
 
 .project-container {
     padding: 30px;
+    /* flex properties */
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
@@ -144,9 +150,9 @@ ul {
 }
 
 #projects figcaption {
+    background-color: #2C74B3;
     font-size: 1.3rem;
     padding: 5px;
-    background-color: #2C74B3;
 }
 
 #projects span {
@@ -155,8 +161,8 @@ ul {
 }
 
 #projects a {
-    text-decoration: none;
     color: #FAF7F0;
+    text-decoration: none;
 }
 
 #projects a:visited  {
@@ -189,10 +195,11 @@ ul {
 /* contact layout start */
 
 #contact {
+    background-color: rgba(10, 38, 71, 0.8);
     padding: 50px 0;
     height: 80vh;
-    background-color: rgba(10, 38, 71, 0.8);
     text-align: center;
+    /* flex properties */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -200,23 +207,23 @@ ul {
 }
 
 #contact h1 {
-    font-size: 4rem;
     color: whitesmoke;
+    font-size: 4rem;
     margin: 10px 
 }
 
 #contact p {
-    font-size: 1.5rem;
     color: whitesmoke;
+    font-size: 1.5rem;
     margin: 10px 0 30px; 
 }
 
 
 #contact ul {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     min-width: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #contact a {
@@ -243,10 +250,9 @@ ul {
 
 /* footer layout start*/
 .footer-rule {
-    height: 1vh;
     background-color: #86E5FF;
+    height: 1vh;
 }
-
 
 footer {
     height: 19vh;
@@ -261,9 +267,9 @@ footer div {
 }
 
 footer p {
+    color: #FAF7F0;
     font-size: 1em;
     padding: 5px;
-    color: #FAF7F0;
 }
 
 /* footer layout end*/
