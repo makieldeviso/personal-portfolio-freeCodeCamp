@@ -15,8 +15,6 @@ body {
 }
 
 
-
-
 /* header layout start*/
 /* fixes the header to always top */
 header {
@@ -24,6 +22,7 @@ header {
     width: 1000px;
     position: fixed;
     margin: 0 auto;
+    z-index: 1;
 }
 
 
@@ -63,14 +62,27 @@ ul {
 
 /* welcome layout start */
 
+
+
+
 #welcome-section {
-    width: 1000px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #FAF7F0;
+    background-color: rgba(250, 247, 240, 0.8);
+}
+
+#welcome-section img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FFC93C;
+    z-index: 2;
+    opacity: 100%;
+    
 }
 
 #welcome-section div {
@@ -80,6 +92,7 @@ ul {
 #welcome-section h1 {
     font-size: 4.5rem;
     margin: 10px;
+    flex: 2;
 }
 
 #welcome-section p {
@@ -93,7 +106,7 @@ ul {
 /* projects layout start */
 #projects {
     text-align: center;
-    padding: 50px 0 50px;
+    padding: 50px 0;
     background-color: #144272;
     
 }
@@ -106,7 +119,7 @@ ul {
 
 #projects hr {
     width: 50%;
-    min-width: 500px;
+    min-width: 20rem;
     margin: 0 auto 50px;
     border: 2px solid #FAF7F0;
 }
@@ -124,7 +137,7 @@ ul {
 }
 
 #projects img {
-    width: 450px;
+    width: 20rem;
     height: auto;
     object-fit: cover;
     transition: filter 0.3s ease-out;
@@ -175,18 +188,85 @@ ul {
 /* projects layout end */
 /* contact layout start */
 
+#contact {
+    padding: 50px 0;
+    height: 80vh;
+    background-color: rgba(10, 38, 71, 0.8);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+#contact h1 {
+    font-size: 4rem;
+    color: whitesmoke;
+    margin: 10px 
+}
+
+#contact p {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin: 10px 0 30px; 
+}
 
 
+#contact ul {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+#contact a {
+    font-size: 1.6rem;
+}
 
 
+#contact a:visited  {
+    color: #FAF7F0;
+}
 
+/* changes color on hover */
+#contact a:hover,
+#contact a:focus { 
+    color: #86E5FF;
+    text-decoration: none;
+}
 
-
+#contact a:active {
+    color: #FAF7F0;
+}
 
 /* contact layout end */
 
+/* footer layout start*/
+.footer-rule {
+    height: 1vh;
+    background-color: #86E5FF;
+}
 
 
+footer {
+    height: 19vh;
+    text-align: center;
+    background-color: #144272;
+    padding: 30px;
+}
+
+footer div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: 1em;
+    padding: 5px;
+    color: #FAF7F0;
+}
+
+/* footer layout end*/
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -204,13 +284,41 @@ ul {
 
 /* flex direction change @ 600px */
 @media (width < 600px) {
+
+    /* minimizes header for smaller screens */
     header {
         height: max-content;
         text-align: right;
     } 
 
+    ul li {
+        list-style-type: none;
+        padding: 10px 10px 10px;
+    }
+
     header a {
         font-size: 1rem;
     }
 
+
+/* adjust footer font size on smaller screen */
+    footer p {
+        font-size: .7em;
+        padding: 2px;
     }
+}
+/* adds background image */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url("https://images.unsplash.com/photo-1673551348561-a90458d58ae7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 85%;
+}
